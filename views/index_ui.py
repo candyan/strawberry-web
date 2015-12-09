@@ -5,3 +5,4 @@ class IndexView(BaseView):
 
     def template_name(self):
         return "index.html"
+    
