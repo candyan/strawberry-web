@@ -1,0 +1,44 @@
+
+<!doctype html>
+  <head>
+    {% block head %}
+    <title>| {% block title %}{% endblock %} | Strawberries.io</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100&amp;subset=greek,latin,cyrillic,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/static/css/icomoon.css">
+    <link rel="stylesheet" href="/static/css/strawberry.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    {% endblock %}
+  </head>
+  <body class="index-body">
+    {% if current_menu_index %}
+    <header class="header header-interior">
+    {% else %}
+    <header class="header">
+    {% endif %}
+      <div class="l-wrap-header">
+        <a title="Strawberry" class="header_logo-wrap" href="/">
+          <img class="s-logo" src="/static/image/s-logo.png" />
+        </a>
+        <div class="header_nav-links-wrap">
+          <nav class="header_nav-links">
+            {% for href, menu_str in [("/guides", "教程"), ("/sign_in", "登录")] %}
+            {% if loop.index == current_menu_index %}
+            <a class="header_nav-link is-active" href="{{ href }}">{{menu_str}}</a>
+            {% else %}
+            <a class="header_nav-link" href="{{ href }}">{{menu_str}}</a>
+            {% endif %}
+            {% endfor %}
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      {% block main %}{% endblock %}
+    </main>
+    <footer>
+    </footer>
+  </body>

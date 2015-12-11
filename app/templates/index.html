@@ -1,51 +1,28 @@
-<!doctype html>
-  <head>
-    <title>Strawberry | Tunnel Severs</title>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
-    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100&amp;subset=greek,latin,cyrillic,latin-ext" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/static/css/icomoon.css">
-    <link rel="stylesheet" href="/static/css/strawberry.css">
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  </head>
-  <body class="index-body">
-    <header class="header">
-      <div class="l-wrap-header">
-        <a title="Strawberry" class="header_logo-wrap" href="/">
-          <img class="s-logo" src="/static/image/s-logo.png" />
-        </a>
-        <div class="header_nav-links-wrap">
-          <nav class="header_nav-links">
-            <a class="header_nav-link" href="/guides">教程</a>
-            <a class="header_nav-link" href="/sigin">登录</a>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="home_image-wrap">
-        <div class="home_image"></div>
-      </div>
-      <h1 class="home_heading">愿天下所有人都拥有自由 StrawberryTS</h1>
-      <div class="home_register-wrap">
-        <form id="register-from" accept-charset="UTF-8" method="post">
-          <input type="text" name="invite-code" id="home_invite-code" placeholder="Invitation Code..." class="home_text-field">
-          <button type="submit" class="home_register_icon"><span class="icon-arrow-right-thick"></span></button>
-        </form>
-      </div>
-      <div class="home_cta-wrap">
-        <h2 class="home_invite">
-          <p>1,000</p>
-          <span class="home_invite-desc">剩余邀请码</span>
-        </h2>
-        <a class="home_apply" href="/apply">
-          <p>获取邀请码</p>
-          <span class="icon-key-outline"></span>
-        </a>
-      </div>
-    </main>
-    <footer>
-    </footer>
-  </body>
+{% extends "base.html" %}
+{% block title %}Tunnel Service{% endblock %}
+{% block head %}
+  {{ super() }}
+  <link rel="stylesheet" href="/static/css/index.css">
+{% endblock %}
+{% block main %}
+  <div class="home_image-wrap">
+    <div class="home_image"></div>
+  </div>
+  <h1 class="home_heading">愿天下所有人都拥有自由 StrawberryTS</h1>
+  <div class="home_register-wrap">
+    <form id="register-from" accept-charset="UTF-8" method="post">
+      <input type="text" name="invite-code" id="home_invite-code" placeholder="邀请码..." class="home_text-field">
+      <button type="submit" class="home_register_icon"><span class="icon-arrow-right-thick"></span></button>
+    </form>
+  </div>
+  <div class="home_cta-wrap">
+    <h2 class="home_invite">
+      <p>{{ unused_code_count }}</p>
+      <span class="home_invite-desc">剩余邀请码</span>
+    </h2>
+    <a class="home_apply" href="/apply">
+      <p>获取邀请码</p>
+      <span class="icon-key-outline"></span>
+    </a>
+  </div>
+{% endblock %}
