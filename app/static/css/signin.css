@@ -1,4 +1,9 @@
 main {
-  height: 200px;
-  background-color: white;
+
+}
+  .l-wrap {
+  max-width: 940px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
 }

@@ -79,10 +79,8 @@
 }
 
 .home_invite {
-  padding-right: 20px;
-  width: 188px;
-  float: left;
-  border-right: 1px solid #AB262b;
+  margin-right: auto;
+  margin-left: auto;
 
   font-size: 24px;
   line-height: 1;
@@ -91,38 +89,11 @@
 }
 
 .home_invite-desc {
+  display: block;
+  margin-top: 10px;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
-}
-
-.home_apply {
-  float: right;
-  padding-left: 22px;
-  width: 250px;
-  background-color: white;
-  color: #E9573F;
-  -webkit-appearance: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  position: relative;
-  display: block;
-  border-radius: 20px;
-  border: 1px solid transparent;
-  font-weight: 600;
-  font-size: 18px;
-  cursor: pointer;
-  outline: none;
-}
-
-.home_apply p {
-  float: left;
-}
-
-.home_apply span {
-  float: right;
-  margin-right: 15px;
-  font-size: 24px;
 }
 
 ::-webkit-input-placeholder {

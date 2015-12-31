@@ -5,4 +5,10 @@
   <link rel="stylesheet" href="/static/css/signin.css">
 {% endblock %}
 {% block main %}
+<div class="l-wrap">
+  <form action="/session" accept-charset="UTF-8" method="post">
+    <input autofocus="autofocus" class="form_input-session" type="text" name="session[account]" id="session_account">
+    <input class="form_input-session" type="password" name="session[pwd]" id="session_pwd">
+  </form>
+</div>
 {% endblock %}
